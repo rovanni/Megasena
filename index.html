@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Sena JavaScript</title>
+    <link rel="stylesheet" href="./css/estilo_megasena_pronto.css">
+</head>
+<body>
+    <h2>Criando jogos da Mega Sena JavaScript</h2>
+    <h2>Utilizando estrutura de repetição: For</h2>
+    <h2>Os jogadores podem gerar entre: 6 a 15 dezenas para jogar</h2>
+    <label>Selecione e a quantidade de dezenas você deseja gerar: </label>
+    <input id="input_valor" type="number" min="6" max="15" value="6"><br>
+    <label>Clique no botão para gerar um combinação de números para jogar na Mega Sena:</label><br><br>    
+    <button id="botão" onclick="megasena()">Gerar Jogo</button>
+    <div>
+        <p id="p_resultado"></p>
+    </div>
+    <div>
+        <p id="p_repetidos"></p>
+    </div>    
+    <script> 
+        function megasena(){
+            var jogos =document.getElementById("input_valor").value;
+            document.getElementById("p_resultado").innerHTML = "";                    
+            var vetor = [];
+            //For que armazena os jogos no vetor
+            for (let i = 0; i<jogos ; i++) {//bloco de inicio for
+                vetor[i]= (Math.floor(Math.random() * 60) + 1);
+            }//fim do for  
+            //Função par verificar numeros repetidos 
+            function hasDuplicates(arr) {
+                return new Set(arr).size !== arr.length;
+            }
+            //contador do while
+            var cont=0;
+            //While chama função para verificar se o vetor possui números repitidos
+            //Se a condição for verdadeira entra no 
+            //enquanto até não mais existir números repetidos no vetor
+            while (hasDuplicates(vetor)) {
+                 for (let i = 0; i<jogos ; i++) {//bloco de inicio for
+                     //if para substituir valores repetidos
+                    if (vetor[cont] == vetor[i+1]){
+                        vetor[cont]= (Math.floor(Math.random() * 60) + 1);
+                    }
+                }//fim do for 
+                cont++;                         
+                //if para não deixar cont passar do tamanho do vetor,
+                //para não verificar valores fora do vetor
+                if(cont>=jogos){
+                    cont=0;
+                }
+            }//fim da verificação dos numeros repetidos 
+            //Ordena o vetor            
+            vetor.sort(function(a, b){return a - b});
+            //For que imprime o vetor na tela
+            for (let i = 0; i<jogos ; i++) {//bloco de inicio for
+                    document.getElementById("p_resultado").innerHTML +=(" (");                    
+                    document.getElementById("p_resultado").innerHTML += vetor[i];
+                    document.getElementById("p_resultado").innerHTML +=(") ");                    
+                }//fim do for   
+        }//fim da função megasena()
+        // Este código adiciona um event listener para o evento "keypress" no documento.
+        // Quando o usuário pressionar a tecla "Enter", o código verifica se a tecla pressionada é "Enter". 
+        // Se for, ele chama o método "click()" no botão "Calcular", que aciona a função "calcular()".    
+        document.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('botão').click();
+                }
+            })                 
+    </script>    
+</body>
+</html>
