@@ -42,8 +42,10 @@
             while (hasDuplicates(vetor)) {
                  for (let i = 0; i<jogos ; i++) {//bloco de inicio for
                      //if para substituir valores repetidos
-                    if (vetor[cont] == vetor[i+1]){
-                        vetor[i+1]= (Math.floor(Math.random() * 60) + 1);
+                     if (vetor[cont] == vetor[i+1]){
+                        if(cont != i+1){
+                            vetor[i+1]= (Math.floor(Math.random() * 60) + 1);
+                        }
                     }
                 }//fim do for 
                 cont++;                         
