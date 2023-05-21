@@ -6,25 +6,27 @@ body{
 h1, h2{
     font-family: Arial, Helvetica, sans-serif;
     animation: blinker 2.5s linear infinite;    
+    text-align: center;
 }
 p, label, input{
     font-size: 20px;
 }
 
-#botão { 
+#button { 
+    text-decoration: none; 
     font-size: 25px;    
     padding: 5px 10px;
     border: none; 
     outline: none; 
     color: #fff; 
-    background: blue; 
+    background: rgb(0, 0, 0); 
     cursor: pointer; 
     position: relative; 
     z-index: 0; 
     border-radius: 10px; 
 } 
  
-#botão:before { 
+#button:before { 
     content: ''; 
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000); 
     position: absolute; 
@@ -41,19 +43,19 @@ p, label, input{
     border-radius: 10px; 
 } 
 
-#botão:active { 
+#button:active { 
     color: #000 
 } 
 
-#botão:active:after { 
+#button:active:after { 
     background: transparent; 
 } 
 
-#botão:hover:before { 
+#button:hover:before { 
     opacity: 1; 
 } 
  
-#botão:after { 
+#button:after { 
     z-index: -1; 
     content: ''; 
     position: absolute; 
@@ -80,6 +82,16 @@ input{
     border-radius: 6px;
     width: 45px;
 }
+hr{
+    height:2px;
+    border-width:0;
+    color:rgb(255, 255, 255);
+    background-color:rgb(0, 0, 0)
+}
+main{
+    text-align: justify;
+}
+
 
 @keyframes blinker {
     50% {
