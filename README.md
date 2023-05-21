@@ -5,4 +5,4 @@ Criei esta página para meus alunos aprenderem como criar uma página responsiva
 
 Demonstração do site:
 
- - [Site que calcula Índice de Massa Corpórea (IMC)](https://rovanni.github.io/megasena/)
+ - [Site que gerar jogos da Mega Sena](https://rovanni.github.io/megasena/)
