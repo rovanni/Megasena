@@ -1,10 +1,10 @@
 body{
-    background: linear-gradient(90deg, rgba(83,146,228,1) 1%, rgba(131,177,228,0.23853291316526615) 49%, rgba(83,146,228,1) 100%);
-    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, #5392e4 1%, rgba(131,177,228,0.23853291316526615) 49%, rgba(83,146,228,1) 100%);
+    font-family: 'Roboto', sans-serif;
     text-align: center;   
+    padding: 16px 20px;    
 }
 h1, h2{
-    font-family: Arial, Helvetica, sans-serif;
     animation: blinker 2.5s linear infinite;    
     text-align: center;
 }
@@ -12,7 +12,7 @@ p, label, input{
     font-size: 26px;
 }
 
-#button { 
+.button { 
     text-decoration: none; 
     font-size: 25px;    
     padding: 5px 10px;
@@ -26,7 +26,7 @@ p, label, input{
     border-radius: 10px; 
 } 
  
-#button:before { 
+.button:before { 
     content: ''; 
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000); 
     position: absolute; 
@@ -43,19 +43,19 @@ p, label, input{
     border-radius: 10px; 
 } 
 
-#button:active { 
+.button:active { 
     color: #000 
 } 
 
-#button:active:after { 
+.button:active:after { 
     background: transparent; 
 } 
 
-#button:hover:before { 
+.button:hover:before { 
     opacity: 1; 
 } 
  
-#button:after { 
+.button:after { 
     z-index: -1; 
     content: ''; 
     position: absolute; 
@@ -74,7 +74,6 @@ p, label, input{
 } 
 
 #p_resultado{
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size: 35px;
 color: darkred;
 }
@@ -88,7 +87,7 @@ hr{
     color:rgb(255, 255, 255);
     background-color:rgb(0, 0, 0)
 }
-main{
+.intro{
     text-align: justify;
 }
 
@@ -100,7 +99,7 @@ main{
     }
 }
 @media only screen and (max-width: 768px) {
-    *, #button, input, p, label  {
+    *, .button, input, p, label  {
         font-size: 20px;
     }
     #p_resultado{

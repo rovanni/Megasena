@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Sena JavaScript</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">        
+    <meta name="description" content="Site para gerar jogos da Megasena">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">     
     <link rel="stylesheet" href="./css/estilo_megasena_pronto.css">
-    <script src="./js/javascript.js"></script>
+    <script src="./js/javascript.js"></script>    
 </head>
 <body>
 	<header>
-        <a id="button" href="index.html">Página Inicial</a>
-        <a id="button" href="sobre.html">Sobre</a>    
+        <a class="button" href="index.html">Página Inicial</a>
+        <a class="button" href="sobre.html">Sobre</a>    
 	</header>
     <hr>    
-    <article>
-        <h2>Criando jogos da Mega Sena JavaScript</h2>
+    <main>
+        <h1>Criando jogos da Mega Sena JavaScript</h1>
         <h2>Utilizando estrutura de repetição: For</h2>
         <h2>Os jogadores podem gerar entre: 6 a 15 dezenas para jogar</h2>
         <label>Selecione a quantidade de jogos: </label>
@@ -24,11 +27,11 @@
         <label>Selecione a quantidade de dezenas que deseja gerar: </label>      
         <input id="input_dezenas" type="number" min="6" max="15" value="6"><br>
         <label>Clique no botão "Gerar Jogo", para gerar um combinação de números para jogar na Mega Sena:</label><br><br>    
-        <button id="button" onclick="megasena()">Gerar Jogo</button>
+        <button class="button" onclick="megasena()">Gerar Jogo</button>
         <div>
             <p id="p_resultado"></p>
         </div>        
-    </article>	    
+    </main>	    
 
     <hr>
         <footer class="main_footer container">
